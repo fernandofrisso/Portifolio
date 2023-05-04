@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {BiHomeAlt, BiUser} from 'react-icons/bi';
-import {BsClipboard2Data, BsBriefcase, BsChatSquare} from 'react-icons/bs';
+import {BiClipboard, BiHomeAlt, BiUser} from 'react-icons/bi';
+import {BsClipboard2Data, BsBriefcase, BsChatSquareText} from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
 const Nav = () => {
@@ -15,11 +15,81 @@ const Nav = () => {
 
         {/* nav iner*/}
 
-        <div>
+        <div className='w-full bg-black/20 h-[96px] backdroop-blur-2x1 rounded-full max-w-[460px] mx-auto px-5 flex justify-between items-center text-2x1 text-white/50'>
 
-        <Link>
+        <Link 
 
-            <BiHomeAlt/>
+            to='home'
+            activeClass='active'
+            smooth={true}
+            spy={true}
+            className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'
+            
+            
+            > 
+
+            <BiHomeAlt />
+        
+        </Link>
+
+
+        <Link  
+
+            to='about'
+            activeClass='active'
+            smooth={true}
+            spy={true}
+            className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'
+            
+            
+            > 
+
+            <BiUser/>
+        
+        </Link >
+
+        <Link 
+
+            to='service'
+            activeClass='active'
+            smooth={true}
+            spy={true}
+            className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'
+            
+            >
+
+            <BiClipboard/>
+        
+        </Link>
+
+
+        <Link 
+
+            to='work'
+            activeClass='active'
+            smooth={true}
+            spy={true}
+            className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'
+            
+            
+            >
+
+            <BsBriefcase/>
+        
+        </Link>
+
+         <Link 
+
+            to='contact'
+            activeClass='active'
+            smooth={true}
+            spy={true}
+            className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'
+            
+            
+            >
+
+            <BsChatSquareText/>
         
         </Link>
 
