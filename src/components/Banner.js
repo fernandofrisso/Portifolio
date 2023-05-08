@@ -1,7 +1,100 @@
 import React from 'react';
 
+//image
+import image from '../assets/avatar.svg';
+
+//icons
+import {FaGithub, FaLinkedin} from 'react-icons/fa';
+
+//animation
+import { TypeAnimation } from 'react-type-animation';
+
+//motion
+import { motion } from 'framer-motion';
+
+//variante
+import {fadeIn} from '../variants'
+
+
 const Banner = () => {
-  return <div className='section' id='home'>Banner</div>;
+
+  return (
+
+    <section className='min-h-[85vh] lg:min-h-[70vh] flex items-center' id='home' >
+
+      <div className='container mx-auto'>
+
+        <div className=' flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gaps-x-12'>
+
+          {/*text*/}
+          <div className='flex-1 text-center font-secondary lg:text-left'>
+
+            <h1 className='text-[55px] font-bold leading-[0.8] lg:text-[110px]'>
+              
+              FERNANDO <span>FRISSO</span>
+
+            </h1>
+
+            <div className='mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading -[1]'>
+
+              <span className=' text-white mr-4'>I am a</span>
+
+              <TypeAnimation sequence={[
+
+                'Developer',
+                2000,
+                'Advogado',
+                2000,
+
+                ]}
+              
+                speed={50}
+                className='text-accent'
+                wrapper='span'
+                repeat={Infinity}
+
+              />
+
+            </div>
+
+            <p className='mb-8 max-w-lg mx-auto lg:mx-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet magna quis tellus vehicula maximus. Quisque vitae lectus sed leo dictum dictum at at ipsum.</p>
+            
+            <div className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
+
+                <button className='btn btn-lg'>Contact me</button>
+                < a href='#' className='text-gradient btn-link'> My Portifólio</a>
+
+            </div>
+
+            {/*social*/}
+            <div className='flex text-[20] gap-x-6 max-w-max mx-auto lg:mx-0'>
+
+              <a href='#'>
+                <FaGithub/>
+              </a>
+
+              <a href='#'>
+                <FaLinkedin/>
+              </a>
+
+            </div>
+
+          </div>
+
+          {/*image*/}
+
+          <div>
+            <img src={image} alt=''/>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  );
+
 };
 
 export default Banner;
