@@ -125,6 +125,7 @@ const Banner = () => {
             viewport={{once: false, amount: 0.7}} 
             className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px] mx-auto'>
             <img src={image} alt=''/>
+            
           </motion.div>
 
         </div>
